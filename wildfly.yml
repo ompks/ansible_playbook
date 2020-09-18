@@ -1,0 +1,23 @@
+---
+    - hosts: local
+    
+      become: yes
+      become_method: sudo
+      #remote_user: use
+    
+      tasks:
+      - name: download the wildfly packages
+        unarchive:
+            src: https://download.jboss.org/wildfly/19.1.0.Final/wildfly-19.1.0.Final.tar.gz
+            dest: /home/user1/ansible_playbook
+            remote_src: yes
+            extra_opts: [--strip-components=1]
+      - name: Run wildfly
+        command:  sh /home/user1/ansible_playbook/bin/standalone.sh
+
+
+
+
+
+
+
