@@ -1,0 +1,7 @@
+- hosts: 192.168.1.215
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Run wildfly
+    shell: pkill -9 java
+    #shell: "cd /home/oracle/wildfly-19.1.0.Final/bin && nohup ./standalone.sh &"
