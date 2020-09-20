@@ -3,5 +3,5 @@
   become_method: sudo
   tasks:
   - name: Run wildfly
-    shell: nohup sh /home/oracle/wildfly-19.1.0.Final/bin/standalone.sh &
+    shell: nohup sh /home/oracle/wildfly-19.1.0.Final/bin/standalone.sh -b=0.0.0.0 -bmanagement=0.0.0.0 &
     #shell: "cd /home/oracle/wildfly-19.1.0.Final/bin && nohup ./standalone.sh &"
