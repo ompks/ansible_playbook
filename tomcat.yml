@@ -6,11 +6,11 @@
   #remote_user: use
 
   tasks:
-  - name: Update and upgrade apt packages
-    yum:
-      upgrade: yes
-      update_cache: yes
-      cache_valid_time: 86400 #One day
+  #- name: Update and upgrade apt packages
+    #yum:
+      #upgrade: yes
+      #update_cache: yes
+      #cache_valid_time: 86400 #One day
 
   - name: install JDK 11
     yum:
