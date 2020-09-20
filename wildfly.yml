@@ -8,11 +8,6 @@
       #environment: 
       #  JAVA_HOME: /home/user1/weblogic_setup_file/jdk1.8.0_66
       tasks:
-      - name: download the wildfly packages
-        unarchive:
-            src: https://download.jboss.org/wildfly/19.1.0.Final/wildfly-19.1.0.Final.tar.gz
-            dest: /home/user1/ansible_playbook/wildfly-19.1.0.Final
-            remote_src: yes
-            extra_opts: [--strip-components=1]
       - name: Run wildfly
-        shell:  nohup sh /home/oracle/wildfly-19.1.0.Final/bin/standalone.sh &
+        #shell:  nohup sh /home/oracle/wildfly-19.1.0.Final/bin/standalone.sh &
+        command: bash -lc "cd /home/oracle/wildfly-19.1.0.Final/bin && nohup ./standalone.sh &"
