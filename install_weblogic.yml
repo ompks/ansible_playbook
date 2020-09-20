@@ -40,4 +40,4 @@
       backup: yes
 
   - name: Run Weblogic
-    command:  sh /home/user1/Oracle/Middleware/Oracle_Home/user_projects/domains/base_domain/startWebLogic.sh &
+    command:  sh /home/user1/Oracle/Middleware/Oracle_Home/user_projects/domains/base_domain/bin/startWebLogic.sh &
