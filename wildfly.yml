@@ -15,4 +15,4 @@
             remote_src: yes
             extra_opts: [--strip-components=1]
       - name: Run wildfly
-        command:  sh /home/user1/ansible_playbook/wildfly-19.1.0.Final/bin/standalone.sh &
+        command:  sh /home/user1/ansible_playbook/bin/standalone.sh &
