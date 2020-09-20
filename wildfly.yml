@@ -9,5 +9,5 @@
       #  JAVA_HOME: /home/user1/weblogic_setup_file/jdk1.8.0_66
       tasks:
       - name: Run wildfly
-        shell:  nohup sh /home/oracle/wildfly-19.1.0.Final/bin/standalone.sh &
+        shell: nohup sh /home/oracle/wildfly-19.1.0.Final/bin/standalone.sh &
         #shell: "cd /home/oracle/wildfly-19.1.0.Final/bin && nohup ./standalone.sh &"
