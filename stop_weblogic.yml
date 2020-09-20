@@ -2,6 +2,6 @@
   become: yes
   become_method: sudo
   tasks:
-  - name: Stop wildfly
+  - name: Stop Weblogic
     shell: pkill -9 java
     #shell: "cd /home/oracle/wildfly-19.1.0.Final/bin && nohup ./standalone.sh &"
