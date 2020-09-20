@@ -10,4 +10,4 @@
       tasks:
       - name: Run wildfly
         #shell:  nohup sh /home/oracle/wildfly-19.1.0.Final/bin/standalone.sh &
-        command: bash -lc "cd /home/oracle/wildfly-19.1.0.Final/bin && nohup ./standalone.sh &"
+        shell: "cd /home/oracle/wildfly-19.1.0.Final/bin && nohup ./standalone.sh &"
