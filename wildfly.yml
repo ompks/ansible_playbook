@@ -5,8 +5,8 @@
       become_method: sudo
       #remote_user: use
       gather_facts: no
-      environment: 
-        JAVA_HOME: /home/user1/weblogic_setup_file/jdk1.8.0_66
+      #environment: 
+      #  JAVA_HOME: /home/user1/weblogic_setup_file/jdk1.8.0_66
       tasks:
       - name: download the wildfly packages
         unarchive:
