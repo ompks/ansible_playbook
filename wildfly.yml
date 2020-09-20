@@ -4,7 +4,7 @@
       become: yes
       become_method: sudo
       #remote_user: use
-      gather_facts: no
+      #gather_facts: no
       #environment: 
       #  JAVA_HOME: /home/user1/weblogic_setup_file/jdk1.8.0_66
       tasks:
