@@ -41,4 +41,4 @@
   #     backup: yes
 
   - name: Run Weblogic
-    command:  nohup sh /home/user1/Oracle/Middleware/Oracle_Home/user_projects/domains/base_domain/bin/startWebLogic.sh &
+    shell:  nohup sh /home/user1/Oracle/Middleware/Oracle_Home/user_projects/domains/base_domain/bin/startWebLogic.sh &
