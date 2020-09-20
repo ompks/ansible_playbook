@@ -4,12 +4,10 @@
       become: yes
       become_method: sudo
       #remote_user: use
-    
+      gather_facts: no
+        environment: 
+          JAVA_HOME: /home/user1/weblogic_setup_file/jdk1.8.0_66
       tasks:
-      - name: Install & Set Java Path
-        command: export JAVA_HOME=/home/user1/weblogic_setup_file/jdk1.8.0_66
-        command: export PATH=$JAVA_HOME/bin:$PATH
-        #command: java -version
       - name: download the wildfly packages
         unarchive:
             src: https://download.jboss.org/wildfly/19.1.0.Final/wildfly-19.1.0.Final.tar.gz
@@ -17,9 +15,7 @@
             remote_src: yes
             extra_opts: [--strip-components=1]
       - name: Run wildfly
-        command:  sh /home/user1/ansible_playbook/bin/standalone.sh &
-
-
+        command:  sh /home/user1/ansible_playbook/wildfly-19.1.0.Final/bin/standalone.sh &
 
 
 
