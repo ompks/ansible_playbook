@@ -3,8 +3,8 @@
   become_method: sudo
   #remote_user: use
   tasks:
-  - name: Check Java version
-    command: java -version
+  #- name: Check Java version
+  #  command: java -version
      
   - name: Download Weblogic binary
     unarchive:
