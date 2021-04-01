@@ -1,0 +1,12 @@
+- name: Validator
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+   - name: Validate Docker Container
+     uri:
+      url: http://192.168.1.215:8181
+      return_content: yes
+     register: this
+     failed_when: "'Welcome to JMR DEVOPS DEMO' not in this.content"
+      

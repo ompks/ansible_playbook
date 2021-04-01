@@ -1,0 +1,13 @@
+- name: Create-Container
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+   - name: Web Container
+     docker_container:
+      name: mywebapp
+      image: mywebimage
+      state: started
+      ports:
+      - "8181:80"
+      detach: true 

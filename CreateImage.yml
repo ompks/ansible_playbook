@@ -1,0 +1,9 @@
+- name: Create-Web-Image
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+   - name: Build Image
+     docker_image:
+      path: /home/oracle/ansibleDemo
+      name: mywebimage
