@@ -1,6 +1,0 @@
-- name: Pull-Image
-  hosts: all
-  tasks:
-   - name: Pull Cent OS Image
-     docker_image:
-      name: centos
